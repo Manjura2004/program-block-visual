@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image in Marquee (CSS)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-top: 30px;
+      height: 160px;
+    }
+
+    .marquee {
+      display: flex;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+    }
+
+    .marquee img {
+      height: 150px;
+      margin-right: 30px;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Image in Marquee</h2>
+  <p>
+    On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document.
+    You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks.
+    When you create pictures, charts, or diagrams, they also coordinate with your current document look...
+    (You can expand or customize this paragraph as needed.)
+  </p>
+
+  <div class="marquee-container">
+    <div class="marquee">
+      <img src="https://via.placeholder.com/300x150.png?text=Image+1" alt="Image 1">
+      <img src="https://via.placeholder.com/300x150.png?text=Image+2" alt="Image 2">
+      <img src="https://via.placeholder.com/300x150.png?text=Image+3" alt="Image 3">
+    </div>
+  </div>
+
+</body>
+</html>
